@@ -156,8 +156,12 @@ var renderEach = function renderEach(node, index) {
   $li.insertBefore($last);
   $li.on("click", function () {
     //新开窗口
-    // window.open(node.url);
-    window.location.href = node.url;
+    if (is_touch_device()) {
+      console.log("是触屏设别");
+      window.location.href = node.url;
+    } else {
+      window.open(node.url);
+    }
   });
   $li.on("click", ".close", function (e) {
     e.stopPropagation();
@@ -216,6 +220,16 @@ $(document).on("keypress", function (e) {
       break;
     }
   }
-}); // $(".info >.text").on("click", (e) => {});
+});
+
+function is_touch_device() {
+  var bool;
+
+  if ("ontouchstart" in window) {
+    return true;
+  } else {
+    return false;
+  }
+} // $(".info >.text").on("click", (e) => {});
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.65699c8d.js.map
+//# sourceMappingURL=main.b03e2e82.js.map
