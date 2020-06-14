@@ -11,8 +11,23 @@ let hashMap = xObject || [
   },
   {
     logo: "W",
-    logoType: "image",
+    logoType: "Text",
     url: "https://www.w3.org",
+  },
+  {
+    logo: "I",
+    logoType: "Text",
+    url: "https://www.iconfont.cn/",
+  },
+  {
+    logo: "B",
+    logoType: "Text",
+    url: "https://www.bootcdn.cn/",
+  },
+  {
+    logo: "D",
+    logoType: "Text",
+    url: "https://dribbble.com/",
   },
 ];
 const simplifyUrl = (url) => {
@@ -97,3 +112,5 @@ $(document).on("keypress", (e) => {
     }
   }
 });
+
+// $(".info >.text").on("click", (e) => {});
